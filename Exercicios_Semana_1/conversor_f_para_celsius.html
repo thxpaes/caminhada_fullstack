@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+</head>
+<body>
+    <h1>Conversor de Temperatura para Celsius</h1>
+    Qual a Temperatura em F°? <br />
+    <input id="fahrenheit" placeholder="Digite em Fahrenheit" type="number" step="0.01" /><br /><br />
+    <button onclick="calcularTemp()">Calcular a Temperatura em C°</button>
+    <p></p>
+
+    <script>
+        function calcularTemp() {
+            const fahrenheit = parseFloat(document.getElementById("fahrenheit").value);
+            const celsius = ((fahrenheit - 32) / 1.8).toFixed(1); 
+        
+            document.querySelector("p").innerHTML = `Sua temperatura de ${fahrenheit}°F em Celsius é ${celsius}°C!`; 
+        }
+    </script>
+</body>
+</html>
